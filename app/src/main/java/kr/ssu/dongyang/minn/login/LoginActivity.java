@@ -50,13 +50,15 @@ public class LoginActivity extends AppCompatActivity {
                 // EditText에 현재 입력되어있는 값을 get(가져온다)해온다.
                 String userID = et_id.getText().toString();
                 String userPass = et_pass.getText().toString();
+                Log.v("앱에서입력id" , userID);
+                Log.v("앱에서입력pass" , userPass);
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         try {
                             // TODO : 인코딩 문제때문에 한글 DB인 경우 로그인 불가
-                            System.out.println("hongchul" + response);
+                            Log.v("response" , response);
                             JSONObject jsonObject = new JSONObject(response);
 
                             boolean success = jsonObject.getBoolean("success");

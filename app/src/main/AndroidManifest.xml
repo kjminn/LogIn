@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LogIn"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
+        tools:targetApi="32">
         <activity
             android:name=".RegisterActivity"
             android:exported="false">
